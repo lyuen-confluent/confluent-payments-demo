@@ -3,7 +3,7 @@
 offset="SET 'auto.offset.reset'='earliest'; "
 
 transit1="CREATE STREAM DEMO_TRANSIT_RAW (transaction_id STRING, user_id STRING, transport_id STRING, type STRING, fare STRING) WITH (kafka_topic='demo_transit_raw', value_format='AVRO');"
-transit2="CREATE STREAM DEMO_TRANSIT AS SELECT user_id, type, transport_id, CAST(replace(fare, 'RMB', '') AS double) AS fare from DEMO_TRANSIT_RAW EMIT CHANGES;"
+transit2="CREATE STREAM DEMO_TRANSIT AS SELECT user_id, type, transport_id, CAST(replace(fare, 'RM', '') AS double) AS fare from DEMO_TRANSIT_RAW EMIT CHANGES;"
 
 # retail
 

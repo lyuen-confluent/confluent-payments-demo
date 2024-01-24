@@ -144,4 +144,5 @@ curl -X POST -H "Content-Type: application/json" -d @../connectors/connector_pos
 curl -X POST -H "Content-Type: application/json" -d @../connectors/connector_rabbitmq-sink_config.json http://localhost:8083/connectors
 # Start Alerts microservice
 echo "=============== Starting Alerts microservice ==================="
+#echo  "=============== Not Starting Alerts microservice ==================="
 docker exec -it demo-alerts touch /tmp/go
