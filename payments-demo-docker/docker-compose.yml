@@ -176,7 +176,7 @@ services:
     container_name: demo-ui
     hostname: demo-ui
     #image: leoyuen/node:ali-confluent-demo
-    image: leoyuen/node:14-jlaw-confluent-demo
+    image: leoyuen/node:lyuen-confluent-demo
     restart: always
     ports:
       - 24601:3000
@@ -192,7 +192,7 @@ services:
     container_name: demo-server
     hostname: demo-server
     #image: leoyuen/node:ali-confluent-demo
-    image: leoyuen/node:14-jlaw-confluent-demo
+    image: leoyuen/node:lyuen-confluent-demo
     restart: always
     ports:
       - 3010:3010
@@ -220,7 +220,7 @@ services:
     container_name: demo-alerts
     hostname: demo-alerts
     #image: leoyuen/node:ali-confluent-demo
-    image: leoyuen/node:14-jlaw-confluent-demo
+    image: leoyuen/node:lyuen-confluent-demo
     restart: always
     environment:
       - BROKER_HOST=broker
