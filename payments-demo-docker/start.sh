@@ -1,4 +1,4 @@
-docker-compose -f docker-compose.yml up -d
+docker compose -f docker-compose.yml up -d
 
 # Start Data Sources
 echo "=============== Starting data sources ==================="
@@ -73,7 +73,7 @@ echo "sftp has started!"
 
 # Start Confluent Demo Server
 echo "=============== Starting demo server ==================="
-docker exec -it demo-server touch /tmp/go
+docker exec -t demo-server touch /tmp/go
 
 # Verify connect has started within MAX_WAIT seconds
 MAX_WAIT=900
